@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collapsible Sidebar</title>
+    <!-- Add Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./index.css">
+</head>
+
+<body>
+    <!-- Header with the Toggle Sidebar button -->
+    <header class="navbar sticky-top navbar-default navbar-fixed-top navigation">
+        <button type="button" class="btn btn-primary btn-sm" onclick="toggleSidebar()">Toggle Sidebar</button>
+    </header>
+
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <ul>
+            <li><a href="#">Dashboard</a></li>
+            <li><a href="#">Orders</a></li>
+            <li><a href="#">Return / Exchange</a></li>
+            <li><a href="#">Request / Enquiries</a></li>
+            <li><a href="#">Customers</a></li>
+            <li><a href="#">Sellers</a></li>
+            <li><a href="#">Reports</a></li>
+            <li><a href="#">Account and settings</a></li>
+        </ul>
+    </div>
+
+    <!-- Page content -->
+    <div class="content" id="content">
+        <section class="top-container">
+            <div class="row">
+                <div class="col-12 quote">
+                    <h3>Create Quote</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    <input class="search-input" type="text">
+                    <button type="button" class="btn btn-light search-button">Remove</button>
+                </div>
+                <div class="col-6 quote-buttons">
+                    <button type="button" class="btn btn-light sp-right">CANCEL</button>
+                    <button type="button" class="btn btn-dark">CREATE QUOTE</button>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="card-container section">
+                <div class="card-img-container">
+                    <img class="card-image"
+                        src="https://www.singaporebusinesscentre.com.sg/wp-content/uploads/2016/12/singapore-business-centre-team-placeholder-t2.png"
+                        tag="Customer Image" />
+                </div>
+                <div class="card-right">
+                    <div>
+                        <h3>Johnathan Wick</h3>
+                    </div>
+                    <div class="row card-items">
+                        <div class="col">
+                            <div>Wallet</div>
+                            <b>1500</b>
+                        </div>
+                        <div class="col">
+                            <div>Mobstar points</div>
+                            <b>328 points (100RS)</b>
+                        </div>
+                        <div class="col">
+                            <div>Phone number</div>
+                            <b>8655426554</b>
+                        </div>
+                        <div class="col">
+                            <div>Email id</div>
+                            <b>johnathanwick@gmail.com</b>
+                        </div>
+                        <div class="col">
+                            <div>GST</div>
+                            <b>07AAGFF2194N1Z1</b>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="address-container section">
+                <div class="row gy-5">
+                    <div class="col-6">
+                        <div class="add-border">
+                            <h4>Delivery address</h4>
+                            <span class="address-list">carlos sainz</span>
+                            <span class="address-list">10 downing street, 4th floor </span>
+                            <span class="address-list">chennai, 600005</span>
+                            <span class="address-list">+91 9797979797</span>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="add-border">
+                            <h4>Billing address</h4>
+                            <span class="address-list">carlos sainz</span>
+                            <span class="address-list">10 downing street, 4th floor </span>
+                            <span class="address-list">chennai, 600005</span>
+                            <span class="address-list">+91 9797979797</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="rfocard-container section">
+                <div>
+                    <h3>RFQ details</h3>
+                </div>
+                <div class="row">
+                    <div class="col-8 rfo-detail">
+                        <span>rfq_201578954</span>
+                        <span>20 july 2023</span>
+                        <span>view</span>
+                        <span>Johnathan Wick</span>
+                        <span>8655426554</span>
+                    </div>
+                    <div class="col-4 rfo-right">
+                        <button>Requested</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="table-container section">
+            <div class="table-header">
+                <div class="table-header-img-section">
+                    <img class="table-header-img" src="https://www.madoverbuildings.com/Content/images/logo-new.svg" />
+                </div>
+                <button type="button" class="btn btn-primary">Add Item</button>
+            </div>
+            <table class="table">
+                <thead class="thead-light">
+                    <tr>
+                        <th scope="col">Unit Name</th>
+                        <th scope="col">Price(Before tax)</th>
+                        <th scope="col">GST</th>
+                        <th scope="col">Price(After tax)</th>
+                        <th scope="col">Discount</th>
+                        <th scope="col">Quantity</th>
+                        <th scope="col">Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr id="first">
+                        <td><span class="input-editable" onclick="makeEditable(this, 1)">Godrage jumbo set of 4
+                                plastic</span>
+                        </td>
+                        <td data-actualprice="1"><span class="editableinput" onclick="makeEditable(this, 1)">8000</span>
+                        </td>
+                        <td>18%</td>
+                        <td data-priceaftertex="1">8000</td>
+                        <td>200</td>
+                        <td>800</td>
+                        <td data-totalprice="1">8000</td>
+                    </tr>
+                    <tr id="2">
+                        <td><span class="input-editable" onclick="makeEditable(this, 2)">Godrage jumbo set of 4
+                                plastic</span>
+                        </td>
+                        <td data-actualprice="2"><span class="editableinput" onclick="makeEditable(this, 2)">8000</span>
+                        </td>
+                        <td>18%</td>
+                        <td>8000</td>
+                        <td>200</td>
+                        <td>800</td>
+                        <td data-totalprice="2">8000</td>
+                    </tr>
+                    <tr id="3">
+                        <td><span class="input-editable" onclick="makeEditable(this, 3)">Godrage jumbo set of 4
+                                plastic</span>
+                        </td>
+                        <td data-actualprice="3"><span class="editableinput" onclick="makeEditable(this, 3)">8000</span>
+                        </td>
+                        <td>18%</td>
+                        <td>8000</td>
+                        <td>200</td>
+                        <td>800</td>
+                        <td data-totalprice="3">8000</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+    </div>
+
+    <!-- Add Bootstrap JS (for the toggle button) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script src="./index.js"></script>
+</body>
+
+</html>

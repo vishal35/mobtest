@@ -1,0 +1,175 @@
+/* Custom styles for the sidebar */
+.sidebar {
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 250px;
+  background-color: #222;
+  padding-top: 60px;
+  transition: all 0.3s ease;
+}
+
+.sidebar.collapsed {
+  width: 0px;
+  display: none;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.sidebar li {
+  padding: 8px;
+}
+
+.sidebar li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.content {
+  margin-left: 250px;
+  padding: 20px;
+}
+
+.content.collapsed {
+  margin-left: 20px;
+  padding: 20px;
+}
+
+.navigation {
+  background-color: #337ab7;
+  z-index: 1;
+}
+
+.card-container {
+  display: flex;
+  border: 1px solid;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.card-img-container {
+  display: contents;
+}
+
+.card-image {
+  width: 100px;
+  height: 100px;
+}
+
+.card-items {
+  display: flex;
+}
+
+.card-right {
+  width: -webkit-fill-available;
+}
+
+.card-items > div {
+  display: flow-root;
+}
+
+.address {
+  border: 1px solid;
+  border-radius: 10px;
+}
+
+.address-container {
+}
+
+.add-border {
+  padding: 20px;
+  border: 1px solid;
+  border-radius: 10px;
+}
+
+.address-list {
+  display: block;
+}
+
+.rfocard-container {
+  border: 1px solid;
+  border-radius: 10px;
+  padding: 15px;
+}
+
+.rfo-detail {
+  display: flex;
+  justify-content: space-between;
+}
+
+.rfo-right {
+  display: flex;
+  justify-content: end;
+}
+
+.top-container {
+  padding: 20px 0 30px 0px;
+}
+
+.quote {
+  padding-bottom: 50px;
+}
+
+.search-input {
+  width: 75%;
+  padding: 8px;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+}
+
+.search-button {
+  margin-left: -90px;
+  margin-top: -3px;
+}
+
+.quote-buttons {
+  display: flex;
+  justify-content: end;
+}
+
+.sp-right {
+  margin-right: 15px;
+}
+
+.section {
+  margin: 30px 0px;
+}
+
+.table-container {
+}
+
+.table-header {
+  padding: 20px;
+  border: 1px solid lightgray;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  display: flex;
+  justify-content: space-between
+}
+
+.table-header-img {
+  background-color: #002e5d;
+  padding: 5px;
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+}
+
+/* Media query to collapse sidebar on smaller screens */
+@media (max-width: 768px) {
+  .sidebar {
+    left: -250px;
+  }
+
+  .sidebar.collapsed {
+    left: -60px;
+  }
+
+  .content {
+    margin-left: 0;
+  }
+}
