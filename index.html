@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Collapsible Sidebar</title>
+    <title>Mad Over Buildings</title>
     <!-- Add Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="./index.css">
@@ -137,9 +137,9 @@
                 <div class="table-header-img-section">
                     <img class="table-header-img" src="https://www.madoverbuildings.com/Content/images/logo-new.svg" />
                 </div>
-                <button type="button" class="btn btn-primary">Add Item</button>
+                <button type="button" onclick="addNewRow()" class="btn btn-primary">Add Item</button>
             </div>
-            <table class="table">
+            <table id="data-table" class="table">
                 <thead class="thead-light">
                     <tr>
                         <th scope="col">Unit Name</th>
@@ -152,42 +152,6 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr id="first">
-                        <td><span class="input-editable" onclick="makeEditable(this, 1)">Godrage jumbo set of 4
-                                plastic</span>
-                        </td>
-                        <td data-actualprice="1"><span class="editableinput" onclick="makeEditable(this, 1)">8000</span>
-                        </td>
-                        <td>18%</td>
-                        <td data-priceaftertex="1">8000</td>
-                        <td>200</td>
-                        <td>800</td>
-                        <td data-totalprice="1">8000</td>
-                    </tr>
-                    <tr id="2">
-                        <td><span class="input-editable" onclick="makeEditable(this, 2)">Godrage jumbo set of 4
-                                plastic</span>
-                        </td>
-                        <td data-actualprice="2"><span class="editableinput" onclick="makeEditable(this, 2)">8000</span>
-                        </td>
-                        <td>18%</td>
-                        <td>8000</td>
-                        <td>200</td>
-                        <td>800</td>
-                        <td data-totalprice="2">8000</td>
-                    </tr>
-                    <tr id="3">
-                        <td><span class="input-editable" onclick="makeEditable(this, 3)">Godrage jumbo set of 4
-                                plastic</span>
-                        </td>
-                        <td data-actualprice="3"><span class="editableinput" onclick="makeEditable(this, 3)">8000</span>
-                        </td>
-                        <td>18%</td>
-                        <td>8000</td>
-                        <td>200</td>
-                        <td>800</td>
-                        <td data-totalprice="3">8000</td>
-                    </tr>
                 </tbody>
             </table>
         </section>

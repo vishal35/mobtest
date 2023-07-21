@@ -159,6 +159,11 @@
   border-radius: 10px;
 }
 
+.inputhover{
+  border: 2px solid blue !important;
+  border-radius: 5px !important;
+}
+
 /* Media query to collapse sidebar on smaller screens */
 @media (max-width: 768px) {
   .sidebar {
