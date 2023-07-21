@@ -129,13 +129,15 @@ function addNewRow() {
     const tableBody = document.querySelector('#data-table tbody');
     const newRow = document.createElement('tr');
     newRow.innerHTML = `
-      <td>${dummyData[0]}</td>
-      <td>${dummyData[1]}</td>
-      <td>${dummyData[2]}</td>
-      <td>${dummyData[3]}</td>
-      <td>${dummyData[4]}</td>
-      <td>${dummyData[5]}</td>
-      <td>${dummyData[6]}</td>
+      <td><span class="input-editable" onclick="makeEditable(this, 1)">${dummyData[0]}</span>
+                </td>
+                <td data-actualprice="1"><span class="editableinput" onclick="makeEditable(this, 1)">${dummyData[1]}</span>
+                </td>
+                <td>${dummyData[2]}</td>
+                <td data-priceaftertex="1">${dummyData[3]}</td>
+                <td>${dummyData[4]}</td>
+                <td>${dummyData[5]}</td>
+                <td data-totalprice="1">${dummyData[6]}</td>
     `;
     tableBody.appendChild(newRow);
 }
